@@ -19,25 +19,18 @@
     <header>
       <nav class="navbar">
         <ul>
-          <li>
-            <a class="link" href="">Gmail</a>
-          </li>
-          <li>
-            <a class="link" href="">Images</a>
-          </li>
-          <li>
-            <div class="circle-shadow">
-              <a class="menu-icon" href=""><i class="fas fa-bars"></i></a>
-            </div>
-          </li>
-          <li>
-            <div class="circle-shadow">
-              <a class="user-icon" href=""><span>P</span></a>
-            </div>
-          </li>
+          {% if user.is_authenticated %}
+            <li><a class="link" href="/gmail/">Gmail</a></li>
+            <li><a class="link" href="/images/">Images</a></li>
+            <li><a class="link" href="/logout/">Logout</a></li>
+          {% else %}
+            <li><a class="link" href="{% url 'signup' %}">Signup</a></li>
+            <li><a class="link" href="/login/">Login</a></li>
+          {% endif %}
         </ul>
       </nav>
     </header>
+    
 
     <!--Content-->
     <section class="content-section">

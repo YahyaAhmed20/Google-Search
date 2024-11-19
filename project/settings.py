@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     
     # APPS
     'google',
+    'signup',
 ]
 
 MIDDLEWARE = [

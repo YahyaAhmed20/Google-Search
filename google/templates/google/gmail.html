@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Gmail</title>
-</head>
-<body>
-    <h1>Welcome to Gmail</h1>
-    <p>Your email: {{ email }}</p>
-</body>
-</html>
+<h2>Gmail</h2>
+<ul>
+    {% for email in emails %}
+        <li>{{ email }}</li>
+    {% endfor %}
+</ul>
